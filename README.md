@@ -7,25 +7,27 @@
 
 
 Para começar, o meu objetivo é de criar um repositório no Git Hub, e para isso é preciso seguir alguns passos.
-primeiro abri o Git Bash e digitei o comando : ssh-keygen -t ed 25519 -C "@meuemail".  
+
+primeiro abri o Git Bash e digitei o comando : ssh-keygen -t ed 25519 -C "@meuemail", primeiro passo que segui para gerar a chave ssh.  
 
 Após isso, foi gerado o número da Key fingerprint.
 
-Feito isso, executei um comando para verificar na pasta ssh se as chaves (privada e publica) estão disponíveis, o comando para tal é cd /c/Users/"UsuarioPC"/.ssh/ e 
+Feito isso, executei um comando para verificar na pasta ssh se as chaves (privada e publica) estão disponíveis.O comando para tal é cd /c/Users/"UsuarioPC"/.ssh/. Em seguida "ls", para listar as chaves. 
 
-depois "ls", para listar as chaves. 
-
-Agora para a atividade no Git Hub usei a chave publica, e para isso executei o comando "cat id25519.pub".
+Agora para a atividade no Git Hub usei a chave publica, e para isso executei o comando "cat id25519.pub". 
 
 Após o enter, foi gerado o código, a chave pública. 
 
 Após gerada, apenas fiz login no Git Hub/settings//SSH and GPG keys/ copiei e colei o código no espaço destinado, e adicionei o nome da chave,logo acima. 
 
-A etapa seguinte é entregar a chave privada ao SSH-AGENT, entidade a qual irá lidar com as chaves:
+
+
+**A etapa seguinte é entregar a chave privada ao SSH-AGENT, entidade a qual irá lidar com as chaves:** 
 
 Dentro da pasta ".ssh/" digitei "eval $(ssh-agent -s)", lembrando que esse código gera um número "agente pid ****". Após isso, usei o comando "ls" para listar as 
 
 chaves, e em seguida, para entregá-las ao agente, executei "ssh-add ed25519".
+
 
 
 *Etapas da criação do token de acesso pessoal:
@@ -136,7 +138,7 @@ Agora que está em "staged", fui commita-lo, usando "git commit -m "adiciona ind
 
 
 
-#### Criando repositório no Git Hub: 
+#### Enfim criando o repositório no Git Hub: 
 
 
 
